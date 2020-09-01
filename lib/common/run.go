@@ -3,6 +3,7 @@ package common
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 )
 
 //Get the currently selected configuration file directory
@@ -30,6 +31,7 @@ func GetInstallPath() string {
 }
 
 //Get the absolute path to the running directory
+// 获取程序运行时文件夹路径
 func GetAppPath() string {
 	if path, err := filepath.Abs(filepath.Dir(os.Args[0])); err == nil {
 		return path
@@ -43,4 +45,14 @@ func IsWindows() bool {
 		return true
 	}
 	return false
+}
+
+// 判断文件是否存在
+func FileExists(name string) bool {
+	if _, err := os.Stat(name); err != nil {
+		if os.IsNotExist(err) {
+			return false
+		}
+	}
+	return true
 }
