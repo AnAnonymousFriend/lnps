@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/common/logs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/run.go" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/run.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +39,26 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go test test" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="LPS" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="LNPS" />
+      <directory value="$PROJECT_DIR$/test" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -56,5 +72,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="787" y="348" key="#Go_Modules/0.0.1920.1040@0.0.1920.1040" timestamp="1598530685651" />
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599232260729">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599232260729" />
+    <state x="558" y="85" key="CommitChangelistDialog2" timestamp="1599231863982">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="85" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599231863982" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599232257925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599232257925" />
   </component>
 </project>

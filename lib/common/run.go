@@ -30,7 +30,6 @@ func GetInstallPath() string {
 	return path
 }
 
-//Get the absolute path to the running directory
 // 获取程序运行时文件夹路径
 func GetAppPath() string {
 	if path, err := filepath.Abs(filepath.Dir(os.Args[0])); err == nil {
