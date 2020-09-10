@@ -1,4 +1,4 @@
-# lnps.web
+# web
 
 ## Project setup
 ```
