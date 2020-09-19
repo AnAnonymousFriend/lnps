@@ -9,6 +9,7 @@ import (
 )
 
 func InitAutoCodeRouter(Router *gin.RouterGroup) {
+	
 	AutoCodeRouter := Router.Group("autoCode").
 		Use(jwt.JWT())
 	{

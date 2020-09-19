@@ -1,5 +1,21 @@
 info:
   contact: {}
   license: {}
-paths: {}
+paths:
+  /api/v1/tags/{id}:
+    put:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 登录
 swagger: "2.0"
