@@ -1,18 +1,18 @@
 package routers
 
 import (
+	"LNPS/server/routers/api"
 	"github.com/gin-gonic/gin"
-	jwt "LearningNotes-GoMicro/middleware"
+	jwt "LNPS/server/middleware"
 
-	"LearningNotes-GoMicro/routers/api"
+
 )
 
 func InitAutoCodeRouter(Router *gin.RouterGroup) {
 	AutoCodeRouter := Router.Group("autoCode").
 		Use(jwt.JWT())
 	{
-		AutoCodeRouter.POST("GetAuth", api.GetAuth) // 创建自动化代码
-
+		AutoCodeRouter.POST("GetAuth", api.GetAuth)
 	}
 }
 
