@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pkg/app/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/app/request.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pkg/app/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/app/response.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/pkg" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,6 +52,7 @@
       <recent name="D:\PrivateProjects\src\LNPS\server" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PrivateProjects\src\LNPS\server\pkg" />
       <recent name="D:\PrivateProjects\src\LNPS\server\middleware" />
     </key>
   </component>
@@ -86,10 +89,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="558" y="85" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599231863982" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599965115310">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600614943598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599965115310" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600614943598" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599964709393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,7 +1,7 @@
 package app
 
 import (
-	"LearningNotes-GoMicro/pkg/logging"
+	"LNPS/server/pkg/logging"
 	"github.com/astaxie/beego/validation"
 )
 

@@ -3,7 +3,7 @@ package app
 import (
 	"github.com/gin-gonic/gin"
 
-	"LearningNotes-GoMicro/pkg/e"
+	"LNPS/server/pkg/e"
 )
 
 type Gin struct {
