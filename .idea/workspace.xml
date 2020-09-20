@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/docs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/swagger.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/swagger.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/api/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routers/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routers/sys_auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/sys_auth.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +48,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PrivateProjects\src\LNPS\server\middleware" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PrivateProjects\src\LNPS\server" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PrivateProjects\src\LNPS\server\middleware" />
     </key>
   </component>
   <component name="RunManager">

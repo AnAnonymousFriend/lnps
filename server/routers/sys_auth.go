@@ -1,11 +1,9 @@
 package routers
 
 import (
-	"LNPS/server/routers/api"
-	"github.com/gin-gonic/gin"
+	"LNPS/server/api"
 	jwt "LNPS/server/middleware"
-
-
+	"github.com/gin-gonic/gin"
 )
 
 func InitAutoCodeRouter(Router *gin.RouterGroup) {
