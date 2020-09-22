@@ -5,9 +5,13 @@ import (
 	"time"
 	"fmt"
 	"LNPS/server/pkg/setting"
+
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-var MongoConn *mongo.Connect
+var MongoConn *mongo.Client
 
 
 func Setup() error {
@@ -34,5 +38,5 @@ func Setup() error {
 	}
 
 	fmt.Println("Successfully connected and pinged.")
-
+	return nil
 }
