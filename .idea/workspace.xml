@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pkg/app/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/app/request.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pkg/app/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/app/response.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/pkg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/cmd" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PrivateProjects\src\LNPS\server\cmd" />
       <recent name="D:\PrivateProjects\src\LNPS\server" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -56,18 +55,34 @@
       <recent name="D:\PrivateProjects\src\LNPS\server\middleware" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="go test test" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
-      <module name="LPS" />
-      <working_directory value="$PROJECT_DIR$/test" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <package value="LNPS" />
-      <directory value="$PROJECT_DIR$/test" />
-      <filePath value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229">
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="LPS" />
+      <working_directory value="$PROJECT_DIR$/server/cmd" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../LNPS|$PROJECT_DIR$/server/cmd/main.go" />
+      <package value="LNPS" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="LPS" />
+      <working_directory value="$PROJECT_DIR$/server/cmd" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/server/cmd/main.go" />
+      <package value="LNPS" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
+      <item itemvalue="Go Build.go build main.go" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,18 +96,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="787" y="348" key="#Go_Modules/0.0.1920.1040@0.0.1920.1040" timestamp="1598530685651" />
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599232260729">
+    <state x="414" y="175" width="1092" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600619471550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599232260729" />
+    <state x="414" y="175" width="1092" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600619471550" />
     <state x="558" y="85" key="CommitChangelistDialog2" timestamp="1599231863982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="558" y="85" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599231863982" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600614943598">
+    <state x="815" y="190" key="EnvironmentVariablesDialog" timestamp="1600616504586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600614943598" />
+    <state x="815" y="190" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600616504586" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600619427380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600619427380" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599964709393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
