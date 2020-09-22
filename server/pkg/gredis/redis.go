@@ -6,7 +6,7 @@ import (
 
 	"github.com/gomodule/redigo/redis"
 
-	"LearningNotes-GoMicro/pkg/setting"
+	"LNPS/server/pkg/setting"
 )
 
 var RedisConn *redis.Pool
