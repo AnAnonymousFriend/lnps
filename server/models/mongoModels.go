@@ -11,10 +11,10 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-var MongoConn *mongo.Client
+var MongoCollection *mongo.Collection
 
 
-func Setup() error {
+func init(tableName string) {
 	uri := setting.MongoSetting.Host
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -22,9 +22,8 @@ func Setup() error {
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))
 	if err != nil {
 		panic(err)
-		return err
 	}
-	MongoConn = client
+
 	defer func() {
 		if err = client.Disconnect(ctx); err != nil {
 			panic(err)
@@ -33,13 +32,14 @@ func Setup() error {
 
 	// Ping the primary
 	if err := client.Ping(ctx, readpref.Primary()); err != nil {
+		dbName := setting.MongoSetting.DbName
+		MongoCollection = client.Database(dbName).Collection(tableName)
 		panic(err)
 	}
-
 	fmt.Println("Successfully connected and pinged.")
-	return nil
+
 }
 
-func Add()  {
-	
+func Add(tableName string)  {
+
 }

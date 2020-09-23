@@ -65,6 +65,7 @@ type  Mongo struct {
 	Host string
 	UserName string
 	Password  string
+	DbName string
 }
 
 var MongoSetting = &Mongo{}
