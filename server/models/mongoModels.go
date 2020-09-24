@@ -11,10 +11,9 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-var MongoCollection *mongo.Collection
+var MongoDb *mongo.Database
 
-
-func init(tableName string) {
+func MongoInit() {
 	uri := setting.MongoSetting.Host
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -33,13 +32,18 @@ func init(tableName string) {
 	// Ping the primary
 	if err := client.Ping(ctx, readpref.Primary()); err != nil {
 		dbName := setting.MongoSetting.DbName
-		MongoCollection = client.Database(dbName).Collection(tableName)
+		MongoDb = client.Database(dbName)
 		panic(err)
 	}
 	fmt.Println("Successfully connected and pinged.")
-
 }
 
-func Add(tableName string)  {
-
+func InsertOne(tableName string,obj interface{})  (bool,error){
+	collection  := MongoDb.Collection(tableName)
+	_, err := collection.InsertOne(context.TODO(), obj)
+	if err != nil {
+		return true, err
+	}
+	println("添加条数据失败:",err)
+	return false,err
 }
