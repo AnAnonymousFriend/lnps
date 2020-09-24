@@ -47,3 +47,19 @@ func InsertOne(tableName string,obj interface{})  (bool,error){
 	println("添加条数据失败:",err)
 	return false,err
 }
+
+func DeleteOne(tableName string,obj interface{}) (bool,error) {
+	collection  := MongoDb.Collection(tableName)
+	_, err := collection.DeleteOne(context.TODO(), obj)
+	if err != nil {
+		return true, err
+	}
+	println("添加条数据失败:",err)
+	return false,err
+
+}
+
+func DeleteAll(tableName string) {
+	collection  := MongoDb.Collection(tableName)
+	collection.Drop(context.Background())
+}

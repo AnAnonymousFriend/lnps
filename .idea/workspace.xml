@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/models/mongoModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/mongoModels.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routers/sys_auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/sys_auth.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +110,10 @@
       <screen x="-1920" y="296" width="1920" height="1040" />
     </state>
     <state x="-1227" y="635" key="#Notifications/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600763845570" />
-    <state x="414" y="175" width="1092" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600619471550">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1506" y="471" width="1092" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600918109314">
+      <screen x="-1920" y="296" width="1920" height="1040" />
     </state>
+    <state x="-1506" y="471" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918109314" />
     <state x="414" y="175" width="1092" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600619471550" />
     <state x="558" y="85" key="CommitChangelistDialog2" timestamp="1599231863982">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -122,6 +127,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="996" y="224" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600775182302" />
+    <state width="1877" height="339" key="GridCell.Tab.0.bottom" timestamp="1600918159143">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.0.bottom/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159143" />
+    <state width="1877" height="339" key="GridCell.Tab.0.center" timestamp="1600918159143">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.0.center/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159143" />
+    <state width="1877" height="339" key="GridCell.Tab.0.left" timestamp="1600918159142">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.0.left/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159142" />
+    <state width="1877" height="339" key="GridCell.Tab.0.right" timestamp="1600918159143">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.0.right/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159143" />
+    <state width="1877" height="339" key="GridCell.Tab.1.bottom" timestamp="1600918159144">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.1.bottom/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159144" />
+    <state width="1877" height="339" key="GridCell.Tab.1.center" timestamp="1600918159144">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.1.center/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159144" />
+    <state width="1877" height="339" key="GridCell.Tab.1.left" timestamp="1600918159143">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.1.left/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159143" />
+    <state width="1877" height="339" key="GridCell.Tab.1.right" timestamp="1600918159144">
+      <screen x="-1920" y="296" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="339" key="GridCell.Tab.1.right/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159144" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1600775190776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -131,5 +168,16 @@
     </state>
     <state x="-1297" y="521" width="672" height="678" key="search.everywhere.popup/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600768319404" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600869156731" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/server/routers/router.go</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
