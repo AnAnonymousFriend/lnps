@@ -1,6 +1,9 @@
 package api
 
-import "github.com/gin-gonic/gin"
+import (
+	"LNPS/server/models"
+	"github.com/gin-gonic/gin"
+)
 
 
 
@@ -13,8 +16,13 @@ import "github.com/gin-gonic/gin"
 func GetAuth(ctx *gin.Context){
 		userName := ctx.PostForm("userName")
 		passWord := ctx.PostForm("passWord")
-		println(userName)
-		println(passWord)
+
+		info,err := models.Login(userName,passWord)
+		if err != nil {
+			println(err)
+		}else{
+		println(info)
+		}
 
 }
 
@@ -22,7 +30,10 @@ func GetAuth(ctx *gin.Context){
 // @Summary 获取用户列表
 // @Produce  json
 // @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
-// @Router /api/v1/user [Get]
-func GetUser(ctx *gin.Context){
-
+// @Router /api/v1/user [Post]
+func AddUser(ctx *gin.Context){
+	userName := ctx.PostForm("userName")
+	passWord := ctx.PostForm("passWord")
+	isCreate := models.AddUser(userName,passWord)
+	println(isCreate)
 }

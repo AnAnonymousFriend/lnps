@@ -12,6 +12,7 @@ func InitAutoCodeRouter(Router *gin.RouterGroup) {
 		Use()
 	{
 		AutoCodeRouter.POST("GetAuth", api.GetAuth)
+		AutoCodeRouter.POST("Auth", api.AddUser)
 	}
 }
 
