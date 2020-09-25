@@ -1,4 +1,8 @@
 const Koa = require('koa');
+
+// 注意require('koa-router')返回的是函数:
+const router = require('koa-router')();
+
 const app = new Koa();
 
 
@@ -17,13 +21,30 @@ app.use(async(ctx,next) =>{
 })
 
 
-app.use(async (ctx, next) => {
-    await next();
-    // 设置response的Content-Type:
-    ctx.response.type = 'text/html';
-    // 设置response的内容:
-    ctx.response.body = '<h1>Hello, koa2!</h1>';
+
+app.use(async(ctx,next)=>{
+   if(ctx.request.path == "/test"){
+       ctx.response.body = `Test Page`;
+   }else{
+       await next();
+   }
+})
+
+
+app.use(async(ctx,next)=>{
+    if(ctx.request.path == "/error"){
+        ctx.response.body = `Error Page`;
+    }else{
+        await next();
+    }
+ })
+
+ router.get('/hello/:name', async (ctx, next) => {
+    var name = ctx.params.name;
+    ctx.response.body = `<h1>Hello, ${name}!</h1>`;
 });
+app.use(router.routes());
+
 
 app.listen(3000);
 console.log('app started at port 3000...');
