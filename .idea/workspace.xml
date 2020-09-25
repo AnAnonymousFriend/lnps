@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/conf/app.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/conf/confi.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/log/log.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/mongoModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/mongo/mongoModels.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/setting/setting.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/sys_auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/sys_auth.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
