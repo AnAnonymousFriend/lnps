@@ -1,10 +1,10 @@
 {
   "name": "lnps",
   "version": "1.0.0",
-  "description": "",  
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --inspect=5858 -r ts-node/register ./src/database/database.ts",
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
     "dev": "nodemon",
     "build": "tsc",
     "script": "cd src/scripts && ts-node"
@@ -15,6 +15,7 @@
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
     "mongodb": "^3.6.0"
   },
   "devDependencies": {

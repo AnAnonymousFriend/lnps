@@ -27,5 +27,9 @@ function Connect (){
       });
 }
 
+function DisConnect(){
+    database.close()
+}
+
 
 
