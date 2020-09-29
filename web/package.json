@@ -1,10 +1,13 @@
 {
   "name": "lnps",
   "version": "1.0.0",
-  "description": "",
+  "description": "",  
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "start": "node --inspect=5858 -r ts-node/register ./src/database/database.ts",
+    "dev": "nodemon",
+    "build": "tsc",
+    "script": "cd src/scripts && ts-node"
   },
   "author": "kai",
   "license": "ISC",

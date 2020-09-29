@@ -1,29 +1,30 @@
-import { connect } from "http2";
-import MongoDB from "mongodb";
+import mongoose from "mongoose";
 
-export let client: MongoDB.MongoClient;
-function dbConn() {
-    let conn = new MongoDB.MongoClient("mongodb://127.0.0.1:27017",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-    })
 
-    conn.connect().then(v=>{
-        return;
-    }).catch(res=>{
 
-    });
-    
 
-    if(conn.isConnected()){
-        console.info("连接成功")
+const db =  mongoose.connect("mongodb://localhost/testDB", {
+    useNewUrlParser: true,
+    useFindAndModify: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  });
 
-        let collection = conn.db("lnps").collection("auth")
-        
 
-    }else{
-        console.info("连接失败")
-    }
+// 账户的数据库模型
+var UserSchema = new mongoose.Schema({
+    userName:String,
+    passWord:String,
+   
+});
+var User = mongoose.model('User',UserSchema);
+
+// 新增数据
+var user = {
+  username: 'ydj',
+  password: '123123',
+  email: ''
 }
+var newUser = new User(user);
+newUser.save();
 
-let con = dbConn()
