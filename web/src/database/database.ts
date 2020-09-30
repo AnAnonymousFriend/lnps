@@ -1,36 +1,48 @@
-import { connect } from "http2";
 import Mongoose from "mongoose";
 
 const url = "mongodb://localhost/testDB";
 
 let database: Mongoose.Connection;
 
-function Connect (){
 
+class BaseMongoRepository {
+
+  BaseMongoRepository(){
     if (database) {
-        return;
-      }
+      return database;
+    }
 
-    const db =  Mongoose.connect(url, {
-        useNewUrlParser: true,
-        useFindAndModify: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-      });
+  const db =  Mongoose.connect(url, {
+      useNewUrlParser: true,
+      useFindAndModify: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    });
 
-      database = Mongoose.connection;
-      database.once("open", async () => {
-        console.log("Connected to database");
-      });
-      database.on("error", () => {
-        console.log("Error connecting to database");
-      });
+    database = Mongoose.connection;
+    database.once("open", async () => {
+      console.log("Connected to database");
+    });
+    database.on("error", () => {
+      console.log("Error connecting to database");
+    });
+  };
+
+  disconnect = () => {
+    if (!database) {
+      return;
+    }
+    Mongoose.disconnect();
+  };
+
+
+  InsterBson(tableName:string,parm:any){
+    //database.
+  }
+
 }
 
-
-function DisConnect(){
-    database.close()
-}
+export { BaseMongoRepository };
 
 
 
