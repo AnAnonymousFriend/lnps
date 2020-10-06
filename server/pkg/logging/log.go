@@ -3,7 +3,7 @@ package logging
 import (
 	"fmt"
 
-	"LearningNotes-GoMicro/pkg/file"
+	"LNPS/server/pkg/file"
 	"log"
 	"os"
 	"path/filepath"

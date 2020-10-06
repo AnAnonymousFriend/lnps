@@ -5,9 +5,9 @@ import (
 	"os"
 	"time"
 
-	"LearningNotes-GoMicro/pkg/setting"
+	"LNPS/server/pkg/setting"
 
-	"LearningNotes-GoMicro/pkg/file"
+	"LNPS/server/pkg/file"
 )
 
 func getLogFilePath() string {

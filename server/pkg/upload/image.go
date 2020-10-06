@@ -13,13 +13,13 @@ import (
 
 	"mime/multipart"
 
-	"LearningNotes-GoMicro/pkg/file"
+	"LNPS/server/pkg/file"
 
-	"LearningNotes-GoMicro/pkg/setting"
+	"LNPS/server/pkg/setting"
 
-	"LearningNotes-GoMicro/pkg/logging"
+	"LNPS/server/pkg/logging"
 
-	"LearningNotes-GoMicro/pkg/util"
+	"LNPS/server/pkg/util"
 )
 
 func GetImageFullUrl(name string) string {
