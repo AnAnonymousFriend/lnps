@@ -4,8 +4,8 @@ import (
 	"LNPS/server/models/mongo"
 	"LNPS/server/pkg/setting"
 	"context"
-	"go.mongodb.org/mongo-driver/mongo"
 	"fmt"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 var tableName string = "auth"
@@ -21,10 +21,6 @@ var MongoDb *mongo.Database
 func init()  {
 	fmt.Printf("%v \n", setting.DatabaseSetting.Type)
 	println("参数为："+setting.DatabaseSetting.Type)
-	//var url = setting.MongoSetting.Host
-	//println(url)
-	//var dbName = setting.MongoSetting.DbName
-	//println(dbName)
 	var db,err = mongoModel.ConnectToDB("mongodb://localhost:27017","lnps",10,10)
 	if err!=nil {
 		println(err)
@@ -56,6 +52,7 @@ func AddUser(userName string,passWord string)  bool{
 	_, err := collection.InsertOne(context.TODO(), ash)
 	if err != nil {
 		println(err)
+		return  false
 	}
-	return  true
+	return true
 }

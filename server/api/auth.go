@@ -2,7 +2,10 @@ package api
 
 import (
 	"LNPS/server/models"
+	"LNPS/server/pkg/app"
+	"LNPS/server/pkg/e"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 
@@ -32,8 +35,15 @@ func GetAuth(ctx *gin.Context){
 // @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
 // @Router /api/v1/user [Post]
 func AddUser(ctx *gin.Context){
+	appG := app.Gin{ctx}
 	userName := ctx.PostForm("userName")
 	passWord := ctx.PostForm("passWord")
 	isCreate := models.AddUser(userName,passWord)
-	println(isCreate)
+	if !isCreate {
+		appG.Response(http.StatusInternalServerError, e.ERROR_GET_TAGS_FAIL, nil)
+		return
+	}
+	appG.Response(http.StatusOK, e.SUCCESS, nil)
 }
+
+
