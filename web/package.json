@@ -28,5 +28,5 @@
     "ts-node": "^8.1.0",
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.4.5"
-  }
+  }  
 }

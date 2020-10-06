@@ -28,17 +28,12 @@ class BaseMongoRepository {
     });
   };
 
-  disconnect = () => {
+  disconnect = () => {    
     if (!database) {
       return;
     }
     Mongoose.disconnect();
   };
-
-
-  InsterBson(tableName:string,parm:any){
-    //database.
-  }
 
 }
 

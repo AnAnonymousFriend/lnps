@@ -1,31 +1,18 @@
-import * as Mongoose from "mongoose";
-let database: Mongoose.Connection;
+import { MongoClient, ObjectID, Collection } from "mongodb";
 
+let clientPromise: Promise<MongoClient>;
+export let client: MongoClient;
 
+export async function connect(): Promise<void> {
+    clientPromise = MongoClient.connect("mongodb://localhost/testDB", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    client = await clientPromise;
+    const db = client.db();
+    const tasksCollection = db.collection("tasks");
 
-export const connect = () => {
-  // add your own uri below
-  const uri = "mongodb+srv://<username>:<password>@cluster0-v6q0g.mongodb.net/test?retryWrites=true&w=majority";
-  if (database) {
-    return;
-  }
-  Mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useFindAndModify: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  });
-  database = Mongoose.connection;
-  database.once("open", async () => {
-    console.log("Connected to database");
-  });
-  database.on("error", () => {
-    console.log("Error connecting to database");
-  });
-};
-export const disconnect = () => {
-  if (!database) {
-    return;
-  }
-  Mongoose.disconnect();
-};
+    tasksCollection.insertOne({ device: 1, timestamp: 1 })
+}
+
+let a = connect();

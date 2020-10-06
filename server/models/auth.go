@@ -49,6 +49,8 @@ func Login(userName string,passWord string) (bool,error)  {
 }
 
 func AddUser(userName string,passWord string)  bool{
+	print(userName)
+	print(passWord)
 	ash := auth{userName, passWord,}
 	collection  := MongoDb.Collection(tableName)
 	_, err := collection.InsertOne(context.TODO(), ash)
