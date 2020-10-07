@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="043aaf92-6982-44e3-bb60-0c1b0b558575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/pkg/setting/setting.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
       <recent name="D:\PrivateProjects\src\LNPS\server\cmd" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229">
       <method v="2" />
     </configuration>
@@ -68,15 +71,6 @@
       <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/../LNPS|$PROJECT_DIR$/server/cmd/main.go" />
-      <package value="LNPS" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="LPS" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/server/main.go" />
       <package value="LNPS" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
@@ -106,13 +100,7 @@
       <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
       <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Test.LNPS main.go" />
-      <item itemvalue="Go Build.go build main.go (1)" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build main.go (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,11 +123,11 @@
     </state>
     <state x="-1227" y="635" key="#Notifications/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600763845570" />
     <state x="693" y="339" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1600952828707" />
-    <state x="414" y="174" width="1092" height="866" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601985308455">
+    <state x="414" y="174" width="1092" height="866" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602069533086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1506" y="471" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918109314" />
-    <state x="414" y="174" width="1092" height="866" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601985308455" />
+    <state x="414" y="174" width="1092" height="866" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602069533086" />
     <state x="558" y="85" key="CommitChangelistDialog2" timestamp="1599231863982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -192,14 +180,15 @@
     </state>
     <state width="1877" height="339" key="GridCell.Tab.1.right/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1600918159144" />
     <state width="1877" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600944780452" />
-    <state x="608" y="200" key="SettingsEditor" timestamp="1601983733293">
+    <state x="608" y="200" key="SettingsEditor" timestamp="1602068577404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="608" y="200" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601983733293" />
-    <state x="663" y="236" width="594" height="568" key="find.popup" timestamp="1601985585150">
+    <state x="-1312" y="496" key="SettingsEditor/0.0.1463.874/-1920.296.1920.1040@-1920.296.1920.1040" timestamp="1602032693550" />
+    <state x="608" y="200" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602068577404" />
+    <state x="663" y="236" width="594" height="568" key="find.popup" timestamp="1602069784252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="663" y="236" width="594" height="568" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601985585150" />
+    <state x="663" y="236" width="594" height="568" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602069784252" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601982450128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -61,6 +61,15 @@ type Redis struct {
 
 var RedisSetting = &Redis{}
 
+type MongoDB struct {
+	Host string
+	UserName string
+	Password string
+	DbName string
+}
+var MongoDBSetting = &MongoDB{}
+
+
 var cfg *ini.File
 
 // Setup initialize the configuration instance
@@ -75,6 +84,7 @@ func Setup() {
 	mapTo("server", ServerSetting)
 	mapTo("database", DatabaseSetting)
 	mapTo("redis", RedisSetting)
+	mapTo("mongo", MongoDBSetting)
 
 	AppSetting.ImageMaxSize = AppSetting.ImageMaxSize * 1024 * 1024
 	ServerSetting.ReadTimeout = ServerSetting.ReadTimeout * time.Second

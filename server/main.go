@@ -8,6 +8,10 @@ import (
 
 func main() {
 		setting.Setup()
+		print(setting.RedisSetting.MaxIdle)
+		print(setting.MongoDBSetting.Host)
+
+
 		ginRouter := routers.Routers()
 		httpServer := web.NewService(
 			web.Name("httpprodservice"),

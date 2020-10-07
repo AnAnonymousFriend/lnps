@@ -4,7 +4,6 @@ import (
 	"LNPS/server/models/mongo"
 	"LNPS/server/pkg/setting"
 	"context"
-	"fmt"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -19,15 +18,16 @@ type auth struct {
 var MongoDb *mongo.Database
 
 func init()  {
-	fmt.Printf("%v \n", setting.DatabaseSetting.Type)
-	println("参数为："+setting.DatabaseSetting.Type)
-	var db,err = mongoModel.ConnectToDB("mongodb://localhost:27017","lnps",10,10)
+	setting.Setup()
+	var mongoHost = setting.MongoDBSetting.Host
+	var DbName = setting.MongoDBSetting.DbName
+
+	var db,err = mongoModel.ConnectToDB(mongoHost,DbName,10,10)
+	//var db,err = mongoModel.ConnectToDB("mongodb://localhost:27017","lnps",10,10)
 	if err!=nil {
 		println(err)
 	}
 	MongoDb = db
-	println("调用Init")
-
 }
 
 
