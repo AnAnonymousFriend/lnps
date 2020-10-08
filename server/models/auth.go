@@ -23,13 +23,11 @@ func init()  {
 	var DbName = setting.MongoDBSetting.DbName
 
 	var db,err = mongoModel.ConnectToDB(mongoHost,DbName,10,10)
-	//var db,err = mongoModel.ConnectToDB("mongodb://localhost:27017","lnps",10,10)
 	if err!=nil {
 		println(err)
 	}
 	MongoDb = db
 }
-
 
 
 func Login(userName string,passWord string) (bool,error)  {
