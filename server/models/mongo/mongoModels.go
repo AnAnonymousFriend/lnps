@@ -12,8 +12,9 @@ import (
 var MongoDB *mongo.Database
 
 func Setup(){
-		setting.Setup()
+
 		var mongoHost = setting.MongoDBSetting.Host
+		print("参数为")
 		var DbName = setting.MongoDBSetting.DbName
 
 		var db,err = ConnectToDB(mongoHost,DbName,10,10)
@@ -22,6 +23,7 @@ func Setup(){
 		}
 		MongoDB = db
 }
+
 
 
 
