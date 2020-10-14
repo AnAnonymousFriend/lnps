@@ -1,8 +1,7 @@
 package models
 
 import (
-	"LNPS/server/models/mongo"
-	"LNPS/server/pkg/setting"
+	mongoModel "LNPS/server/models/mongo"
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -15,9 +14,14 @@ type auth struct {
 }
 
 
-var MongoDb *mongo.Database
+var MongoCollection *mongo.Collection
 
-func init()  {
+func main()  {
+	collection  := mongoModel.MongoDB.Collection(tableName)
+	MongoCollection = collection
+}
+
+/*func init()  {
 	setting.Setup()
 	var mongoHost = setting.MongoDBSetting.Host
 	var DbName = setting.MongoDBSetting.DbName
@@ -27,14 +31,14 @@ func init()  {
 		println(err)
 	}
 	MongoDb = db
-}
+}*/
 
 
 func Login(userName string,passWord string) (bool,error)  {
 	var one auth
 	variable_name := auth {userName, passWord}
-	collection  := MongoDb.Collection(tableName)
-	err := collection.FindOne(context.Background(), variable_name).Decode(&one)
+	//collection  := MongoDb.Collection(tableName)
+	err := MongoCollection.FindOne(context.Background(), variable_name).Decode(&one)
 
 	if err !=nil {
 		return false, err
@@ -46,8 +50,8 @@ func AddUser(userName string,passWord string)  bool{
 	print(userName)
 	print(passWord)
 	ash := auth{userName, passWord,}
-	collection  := MongoDb.Collection(tableName)
-	_, err := collection.InsertOne(context.TODO(), ash)
+	//collection  := MongoDb.Collection(tableName)
+	_, err := MongoCollection.InsertOne(context.TODO(), ash)
 	if err != nil {
 		println(err)
 		return  false

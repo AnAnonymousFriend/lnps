@@ -1,13 +1,29 @@
 package mongoModel
 
 import (
+	"LNPS/server/pkg/setting"
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"time"
 )
 
-var MongoDb *mongo.Collection
+
+var MongoDB *mongo.Database
+
+func Setup(){
+		setting.Setup()
+		var mongoHost = setting.MongoDBSetting.Host
+		var DbName = setting.MongoDBSetting.DbName
+
+		var db,err = ConnectToDB(mongoHost,DbName,10,10)
+		if err!=nil {
+			println(err)
+		}
+		MongoDB = db
+}
+
+
 
 func ConnectToDB(uri, name string, timeout time.Duration, num uint64) (*mongo.Database, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)

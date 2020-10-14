@@ -6,6 +6,8 @@ import (
 	"github.com/micro/go-micro/web"
 )
 
+
+
 func main() {
 		setting.Setup()
 		print(setting.RedisSetting.MaxIdle)
