@@ -16,6 +16,8 @@ type auth struct {
 
 var MongoCollection *mongo.Collection
 
+
+
 func Login(userName string,passWord string) (bool,error)  {
 	var one auth
 	var variable_name = auth {userName, passWord}

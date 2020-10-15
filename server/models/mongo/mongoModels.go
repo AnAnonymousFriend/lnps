@@ -8,7 +8,6 @@ import (
 	"time"
 )
 
-
 var MongoDB *mongo.Database
 
 func Setup(){
@@ -23,9 +22,6 @@ func Setup(){
 		}
 		MongoDB = db
 }
-
-
-
 
 func ConnectToDB(uri, name string, timeout time.Duration, num uint64) (*mongo.Database, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
