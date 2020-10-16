@@ -9,10 +9,9 @@ import (
 var tableName string = "auth"
 
 type auth struct {
-	UserName  string	`bson:"dbname",json:"jsonname"`
+	UserName  string	`bson:"dbname" ,json:"jsonname"`
 	PassWord string
 }
-
 
 var authCollection  = NewAuthCollection()
 
@@ -30,8 +29,8 @@ func NewAuthCollection() *mongo.Collection {
 func Login(userName string,passWord string) (bool,error)  {
 	var one auth
 
-	var variable_name = auth {userName, passWord}
-	err := authCollection.FindOne(context.Background(), variable_name).Decode(&one)
+	var variableName = auth {userName, passWord}
+	err := authCollection.FindOne(context.Background(), variableName).Decode(&one)
 
 	if err !=nil {
 		return false, err
