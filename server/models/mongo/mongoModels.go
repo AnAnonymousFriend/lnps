@@ -11,7 +11,6 @@ import (
 var MongoDB *mongo.Database
 
 func Setup(){
-
 		var mongoHost = setting.MongoDBSetting.Host
 		print("参数为")
 		var DbName = setting.MongoDBSetting.DbName
