@@ -1,7 +1,6 @@
 package main
 
 import (
-	mongoModel "LNPS/server/models/mongo"
 	"LNPS/server/pkg/setting"
 	"LNPS/server/routers"
 	"github.com/micro/go-micro/web"
@@ -11,8 +10,6 @@ import (
 
 func main() {
 		setting.Setup()
-		mongoModel.Setup()
-
 		ginRouter := routers.Routers()
 		httpServer := web.NewService(
 			web.Name("httpprodservice"),

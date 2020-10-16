@@ -1,25 +1,26 @@
 package mongoModel
 
 import (
-	"LNPS/server/pkg/setting"
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"time"
 )
 
-var MongoDB *mongo.Database
+var MongoDB = NewMongoDB()
 
-func Setup(){
-		var mongoHost = setting.MongoDBSetting.Host
-		print("参数为")
+
+func NewMongoDB() *mongo.Database{
+		/*var mongoHost = setting.MongoDBSetting.Host
 		var DbName = setting.MongoDBSetting.DbName
-
+		*/
+	var mongoHost = "mongodb://localhost:27017"
+	var DbName = "lnps"
 		var db,err = ConnectToDB(mongoHost,DbName,10,10)
 		if err!=nil {
 			println(err)
 		}
-		MongoDB = db
+		return db
 }
 
 func ConnectToDB(uri, name string, timeout time.Duration, num uint64) (*mongo.Database, error) {

@@ -14,11 +14,9 @@ type auth struct {
 }
 
 
-var MongoCollection *mongo.Collection
+var authCollection  = NewAuthCollection()
 
-
-/*func NewMongoCollection() *mongo.Collection  {
-
+func NewAuthCollection() *mongo.Collection {
 	if mongoModel.MongoDB != nil {
 		collection  := mongoModel.MongoDB.Collection(tableName)
 		return  collection
@@ -26,31 +24,14 @@ var MongoCollection *mongo.Collection
 		println("DB 为空链接")
 		return nil
 	}
-}*/
 
-func main()  {
-	if mongoModel.MongoDB != nil {
-		collection  := mongoModel.MongoDB.Collection(tableName)
-		MongoCollection =  collection
-	}else {
-		println("DB 为空链接")
-	}
 }
-
-
 
 func Login(userName string,passWord string) (bool,error)  {
 	var one auth
+
 	var variable_name = auth {userName, passWord}
-
-	if MongoCollection != nil {
-		 print("连接状态为：true")
-	}else {
-		println("连接状态为：False")
-	}
-
-	collection  := mongoModel.MongoDB.Collection(tableName)
-	err := collection.FindOne(context.Background(), variable_name).Decode(&one)
+	err := authCollection.FindOne(context.Background(), variable_name).Decode(&one)
 
 	if err !=nil {
 		return false, err
@@ -59,10 +40,10 @@ func Login(userName string,passWord string) (bool,error)  {
 }
 
 func AddUser(userName string,passWord string)  bool{
-	
+
 	ash := auth{userName, passWord,}
-	collection  := mongoModel.MongoDB.Collection(tableName)
-	_, err := collection.InsertOne(context.TODO(), ash)
+	_, err := authCollection.InsertOne(context.TODO(), ash)
+
 	if err != nil {
 		println(err)
 		return  false
