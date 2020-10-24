@@ -20,12 +20,13 @@ import (
 func GetAuth(ctx *gin.Context){
 		userName := ctx.PostForm("userName")
 		passWord := ctx.PostForm("passWord")
-
-		info,err := models.Login(userName,passWord)
+		islogin,err := models.Login(userName,passWord)
 		if err != nil {
 			println(err)
 		}else{
-		println(info)
+
+
+		println(islogin)
 		}
 
 }

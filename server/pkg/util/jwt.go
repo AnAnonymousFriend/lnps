@@ -5,7 +5,7 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 
-	"LearningNotes-GoMicro/pkg/setting"
+	"LNPS/server/pkg/setting"
 )
 
 var jwtSecret = []byte(setting.AppSetting.JwtSecret)

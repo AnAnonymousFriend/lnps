@@ -1,19 +1,30 @@
 package main
 
 import (
+	"time"
+	"context"
 	"fmt"
 )
 
-var T int64 = a()
-
-func init() {
-	fmt.Println("init in main.go ")
-}
-
-func a() int64 {
-	fmt.Println("calling a()")
-	return 2
-}
 func main() {
-	fmt.Println("calling main")
+
+
+
+	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+	defer cancel()
+
+	go handle(ctx, 500*time.Millisecond)
+	select {
+		case <-ctx.Done():
+	fmt.Println("main", ctx.Err())
+	}
+}
+
+func handle(ctx context.Context, duration time.Duration) {
+	select {
+		case <-ctx.Done():
+			fmt.Println("handle", ctx.Err())
+		case <-time.After(duration):
+			fmt.Println("process request with", duration)
+}
 }

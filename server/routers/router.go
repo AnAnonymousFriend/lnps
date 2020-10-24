@@ -10,6 +10,7 @@ import (
 
 // 多路由注册
 func Routers() *gin.Engine {
+
 	var Router = gin.Default()
 	Router.Use(middleware.Cors())
 	Router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
@@ -18,5 +19,4 @@ func Routers() *gin.Engine {
 	// 注册用户路由
 	InitAutoCodeRouter(ApiGroup)
 	return Router
-
 }

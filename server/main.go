@@ -7,7 +7,6 @@ import (
 )
 
 
-
 func main() {
 		setting.Setup()
 		ginRouter := routers.Routers()

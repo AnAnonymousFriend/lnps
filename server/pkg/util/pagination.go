@@ -5,7 +5,7 @@ import (
 
 	 "github.com/unknwon/com"
 
-	"LearningNotes-GoMicro/pkg/setting"
+	"LNPS/server/pkg/setting"
 )
 
 func GetPage(c *gin.Context) int {
